@@ -1,2 +1,9 @@
-@import "function/_color";
-@import "./var";
+@import "var";
+@import "functions";
+@import "maps";
+@import "mixins/breakpoints";
+@import "mixins/grid";
+@import "grid";
+
+
+
