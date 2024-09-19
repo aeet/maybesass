@@ -1,0 +1,14 @@
+{
+  "name": "CUI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "sass src:dist",
+    "watch": "sass --watch src:dist"
+  },
+  "dependencies": {
+    "CUI": "file:",
+    "sass": "^1.79.1"
+  }
+}
