@@ -53,8 +53,6 @@
 //    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
 //    "-sm"
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @debug [breakpoint-infix] [name] $name;
-  @debug [breakpoint-infix] [breakpoints] $breakpoints;
   @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }
 
@@ -62,7 +60,6 @@
 // Makes the @content apply to the given breakpoint and wider.
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
-  @debug [media-breakpoint-up] [min] $min;
   @if $min {
     @media (min-width: $min) {
       @content;
@@ -110,9 +107,9 @@
 // No minimum for the smallest breakpoint, and no maximum for the largest one.
 // Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
 @mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
+  $min:  breakpoint-min($name, $breakpoints);
   $next: breakpoint-next($name, $breakpoints);
-  $max: breakpoint-max($next, $breakpoints);
+  $max:  breakpoint-max($next, $breakpoints);
 
   @if $min != null and $max != null {
     @media (min-width: $min) and (max-width: $max) {

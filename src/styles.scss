@@ -1,53 +1,19 @@
-@import "var";
+@use "sass:color";
+// scss-docs-start import-stack
+// Configuration
 @import "functions";
+@import "variables";
+@import "variables-dark";
 @import "maps";
-@import "mixins/breakpoints";
-@import "mixins/grid";
-@import "grid";
-@import "mixins/container";
-@import "containers";
+@import "mixins";
 @import "utilities";
-@import "vendor/rfs";
-@import "mixins/utilities";
 
+// Layout & components
+@import "root";
+@import "containers";
+@import "grid";
 
-$utilities: map-get-multiple(
-                $utilities,
-                        (
-                                "display",
-                                "order",
-                                "flex",
-                                "flex-direction",
-                                "flex-grow",
-                                "flex-shrink",
-                                "flex-wrap",
-                                "justify-content",
-                                "align-items",
-                                "align-content",
-                                "align-self",
-                                "margin",
-                                "margin-x",
-                                "margin-y",
-                                "margin-top",
-                                "margin-end",
-                                "margin-bottom",
-                                "margin-start",
-                                "negative-margin",
-                                "negative-margin-x",
-                                "negative-margin-y",
-                                "negative-margin-top",
-                                "negative-margin-end",
-                                "negative-margin-bottom",
-                                "negative-margin-start",
-                                "padding",
-                                "padding-x",
-                                "padding-y",
-                                "padding-top",
-                                "padding-end",
-                                "padding-bottom",
-                                "padding-start",
-                        )
-);
-
+// Utilities
 @import "utilities/api";
+// scss-docs-end import-stack
 
