@@ -360,5 +360,15 @@ $grid-breakpoints: (
 $grid-columns: 12 !default;
 $grid-gutter-width: 1.5rem !default;
 $grid-row-columns: 6 !default;
-
 $include-column-box-sizing: true !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px
+) !default;
+
+$container-padding-x: $grid-gutter-width !default;
+
